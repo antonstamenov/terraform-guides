@@ -14,6 +14,6 @@ variable "instance_type" {
 }
 
 variable "name" {
-  description = "name to pass to Name tag"
-  default = "Provisioned by Terraform"
+  description = "name to pass to Name etag"
+  default = "Provisioned by Terraform Enterprise"
 }
