@@ -3,7 +3,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "${var.aws_region}"
+  region = var.aws_region
 }
 
 resource "aws_instance" "ubuntu" {
@@ -11,7 +11,7 @@ resource "aws_instance" "ubuntu" {
   instance_type = "${var.instance_type}"
   availability_zone = "${var.aws_region}a"
 
-  tags {
-    Name = "${var.name}"
+  tags = {
+    Name = var.name
   }
 }
